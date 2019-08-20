@@ -1,0 +1,51 @@
+{
+    "name": "phpinnacle/ulid",
+    "type": "library",
+    "description": "PHPinnacle ULID implementation",
+    "keywords": [
+        "phpinnacle", "ulid", "uuid"
+    ],
+    "homepage": "https://github.com/phpinnacle/ulid",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PHPinnacle",
+            "email": "dev@phpinnacle.com",
+            "homepage": "https://phpinnacle.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpbench/phpbench": "^0.16",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPinnacle\\Ulid\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPinnacle\\Ulid\\Tests\\": "tests",
+            "PHPinnacle\\Ulid\\Bench\\": "benchmarks"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "bench": "phpbench run benchmarks --report=aggregate"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
